@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FAF90D4B2748414100831B32 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF90D4A2748414100831B32 /* main.swift */; };
+		FAF90D53274843A600831B32 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = FAF90D52274843A600831B32 /* RxRelay */; };
+		FAF90D55274843A600831B32 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FAF90D54274843A600831B32 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAF90D55274843A600831B32 /* RxSwift in Frameworks */,
+				FAF90D53274843A600831B32 /* RxRelay in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +82,10 @@
 			dependencies = (
 			);
 			name = RxSwiftBase;
+			packageProductDependencies = (
+				FAF90D52274843A600831B32 /* RxRelay */,
+				FAF90D54274843A600831B32 /* RxSwift */,
+			);
 			productName = RxSwiftBase;
 			productReference = FAF90D472748414100831B32 /* RxSwiftBase */;
 			productType = "com.apple.product-type.tool";
@@ -106,6 +114,9 @@
 				Base,
 			);
 			mainGroup = FAF90D3E2748414100831B32;
+			packageReferences = (
+				FAF90D51274843A500831B32 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = FAF90D482748414100831B32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -286,6 +297,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAF90D51274843A500831B32 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAF90D52274843A600831B32 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAF90D51274843A500831B32 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		FAF90D54274843A600831B32 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAF90D51274843A500831B32 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FAF90D3F2748414100831B32 /* Project object */;
 }
